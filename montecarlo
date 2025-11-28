@@ -1,0 +1,24 @@
+import random
+
+def otomatik(kere):
+    kırmızı=0
+    mavi=0
+
+    for i in range(kere):
+        x=random.random()#koordinat sistemi
+        y=random.random()#koordinat sistemi
+
+        #x ekseninde çemberin olduğu sayının karesinden küçük olmalı
+
+        if(x**2+y**2<1)<1:  #çemberin alanı
+            kırmızı+=1
+        else:
+            mavi+=1
+
+    sonuc=kırmızı/mavi
+
+    print(kırmızı)
+    print(mavi)
+    return sonuc
+
+otomatik(1000)
